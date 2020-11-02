@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #ebebeb;
+    display: grid;
+}
+#InputExtraPayment{
+    display: flex;
+    flex-direction: column;
+}
+.CalculatorWidget{
+    box-sizing: border-box;
+    margin-top: 10vh;
+    grid-area: center;
+    background-color: #fff;
+    width: 250px;
+    height: fit-content;
+    box-shadow: 0 10px 16px 0 #b1afaf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 35px;
+    padding: 1em;
+    text-align: center;
+}
+.CalculatorWidget__Body, .CalculatorWidget__Footer, .CalculatorWidget__Submit{
+    width: 100%;
+    font-family: Arial;
+}
+.CalculatorWidget > .CalculatorWidget__Header{
+    border-bottom: 2px solid #0066ec;
+    margin-bottom: 0.5em;
+    color: #0066ec;
+    padding: 10px;
+}
+.CalculatorWidget .CalculatorWidget__Body{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+.CalculatorWidget .CalculatorWidget__Body > a{
+    font-size: 10pt;
+    margin-top: 1em;
+    color: #3a3a3a;
+    margin-bottom: 0.5em;
+}
+.body__Container{
+    width: inherit;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+    font-size: 10pt;
+    color: #3a3a3a;
+    box-sizing: border-box;
+    height: 30px;
+}
+.body__Container >.namaInput{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 52%;
+    text-align: left;
+    height: 100%;
+}
+.body__Container>.input{
+    display: flex;
+    text-align: left;
+    height: 100%;
+    width: 48%;
+}
+.body__Container>.flexInp{
+    display: flex;
+    flex-direction: row;
+}
+.body__Container>.input >.popupsOverlay{
+    display: none;
+}
+.body__Container>.input >.input-symbol-dollar{
+    width: 10px;
+    position: absolute;
+    padding: 8px;
+    color: #c5c5c5;
+    content: "$";
+}
+.body__Container>.input >.input-symbol-persen{
+    width: 10px;
+    position: absolute;
+    padding: 6px;
+    color: #c5c5c5;
+    content: "%";
+    margin-left: 5.5em;
+}
+.body__Container>.input >.input-symbol-years{
+    width: 30px;
+    position: absolute;
+    padding: 6px;
+    color: #c5c5c5;
+    content: "years";
+    margin-left: 4em;
+}
+/* .body__Container>.input>.input-symbol::after{
+    display:inline-block;
+    content: "$";
+    position: absolute;
+    top: 0;
+    left: 5px;
+} */
+.body__Container>.input>input{
+    display: block;
+    border-color: #d6d6d6;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+input#inputYearly{
+    border-radius: 5px 0 0 5px;
+    width: 55%;
+    border: 1px solid  #d6d6d6;
+    border-right: 0;
+}
+select#list__bulan-Yearly{
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    width: 45%;
+    border: 1px solid  #d6d6d6;
+    border-left: none;
+}
+.body__Container>.input>input#inputDP,input#inputPrice,input#inputMonthly,input#inputYearly{
+    padding-left: 1.5em;
+}
+select#list__bulan{
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 1px solid  #d6d6d6;
+    border-right: none;
+}
+select#list__Year{
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    border: 1px solid  #d6d6d6;
+    border-left: none;
+}
+.body__Container>.input>input#inputIR{
+    padding-right: 2em;
+}
+.body__Container>.input>input#inputMT{
+    padding-right: 3.5em;
+}
+.CalculatorWidget .CalculatorWidget__Submit{
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12pt;
+    font-weight: 600;
+    background-color: #0066ec;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+/* footer */
+.CalculatorWidget .CalculatorWidget__Footer{
+    color: #494d52;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 8pt;
+}
+/* Popups calculate widget !!!! */
+/* ============================ */
+#CalculateWidgetPops{
+    visibility: hidden;
+}
+.CW__popups{
+    margin-top: 0;
+    background-color: #3a3a3ac5;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: row;
+    flex: center;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.Pops{
+    background-color: #bbe1fa;
+    width: 50%;
+    height: 65%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 16px 24px 0 #494d52;
+    border-radius: 10px;
+}
+.flexPops{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+}
+#contentPops{
+    box-sizing: border-box;
+    width: 50%;
+    text-align: right;
+    padding: 1em;
+    height: 100%;
+    color:  #124385;
+}
+.popsChart{
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    padding: 1em;
+}
+.chrt{
+    background-color: rgb(11, 216, 223);
+    width: 100%;
+    height: 30%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.chrtKOTAK{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4px;
+}
+.kotak{
+    display: block;
+    color: #124385;
+    font-weight: 800;
+    font-size: 8pt;
+}
+.namaKotak{
+    width: 45%;
+    color:  #124385;
+}
+.namaKotak>div{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-sizing: border-box;
+    padding: 4px;
+    height: 34%;
+    text-align: left;
+}
+.kotakBiru,.kotakKuning,.kotakPink{
+    box-sizing: border-box;
+    padding: 5px;
+    width: 40px;
+    height: 33%;
+}
+.kotakKuning{
+    background-color: #f7d22f;
+}
+.kotakBiru{
+    background-color: rgb(11, 216, 223);
+}
+.kotakPink{
+    background-color: #ec00b9;
+}
+.dpC{
+    width: 20%;
+    height: 100%;
+    background-color: #f7d22f;
+    border-radius: 20px 0 0 20px;
+}
+.interestC{
+    width: 8.5%;
+    height: 100%;
+    background-color: #ec00b9;
+}
+/* .Pops::-webkit-scrollbar{
+    display: none;
+} */
+.Pops>h2{
+    border-bottom: 2px solid #fff;
+    padding: 1em;
+    color: #fff;
+    background-color:#124385;
+}
+.btn__closePops{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    right: 25%;
+    margin-top: -50px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    background-color: rgb(194, 18, 18);
+}
+.bungkusData{
+    overflow: auto;
+    scrollbar-width: none;
+    width: 100%;
+    height: 50%;
+}
+.bungkusData::-webkit-scrollbar{
+    display: none;
+}
+#tabelData{
+    width: inherit;
+}
+#tabelData tr{
+    border: 2px solid #0066ec;
+}
+#tabelData td{
+    padding: 2px;
+    border:none;
+    border-bottom: 2px solid #0066ec;
+}
+.hD{
+    background-color:#0066ec;
+    color: white;
+}

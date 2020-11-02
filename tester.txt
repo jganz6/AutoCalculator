@@ -1,0 +1,138 @@
+    <!--Popup-->
+    <div id="CalculateWidgetPops" class="CW__popups">
+        <div class="Pops">
+            <button class="btn__closePops" type="reset" onclick="closePops()">
+                X
+            </button>
+            <h2>Mortgage Popup</h2>
+            <div class="flexPops">
+                <div class="popsChart">
+                    <div class="chrtKOTAK">
+                        <div class="kotak">
+                            <div id="kotakBiru" class="kotakBiru">61.5%</div>
+                            <div id="kotakKuning" class="kotakKuning">20%</div>
+                            <div id="kotakPink" class="kotakPink">8.5%</div>
+                        </div>
+                        <div class="namaKotak">
+                            <div>Total Principal</div>
+                            <div>Down Payment</div>
+                            <div>Total Interest</div>
+                        </div>
+                    </div>
+                    <div class="chrt">
+                        <div id="dpC" class="dpC"></div>
+                        <div id="intC" class="interestC"></div>
+                    </div>
+                </div>
+                <div id="contentPops"></div>
+            </div>
+            <div class="bungkusData">
+                <table id="tabelData"></table>
+            </div>
+        </div>
+    </div>
+    <!--WIDGET-->
+            <!--WidgetHeader-->
+        <div class="CalculatorWidget__Header">
+            <h2>CalculatorWidget</h2>
+        </div>
+        <!--WidgetBody-->
+        <div class="CalculatorWidget__Body">
+            <div class="body__Container">
+                <div class="namaInput">Home Price</div>
+                <div class="input">
+                    <label id="label-Price" for="inputPrice" class="input-symbol-dollar">$</label>
+                    <input id="inputPrice" tabindex="0" type="text" name="inputPrice" placeholder="0.00">
+                </div>
+            </div>
+            <div class="body__Container">
+                <div class="namaInput">Down Payment</div>
+                <div class="input">
+                    <label id="label-DP" for="inputDP" class="input-symbol-dollar">$</label>
+                    <input id="inputDP" type="text" name="inputDP" placeholder="0.00">
+                </div>
+            </div>
+            <div class="body__Container">
+                <div class="namaInput">Interest Rate</div>
+                <div class="input">
+                    <label id="label-IR" for="inputIR" class="input-symbol-persen">%</label>
+                    <input id="inputIR" type="text" name="inputIR" placeholder="0.0">
+                </div>
+            </div>
+            <div class="body__Container">
+                <div class="namaInput">Mortgage Term</div>
+                <div class="input">
+                    <label id="label-MT" for="inputMT" class="input-symbol-years">years</label>
+                    <input id="inputMT" type="text" name="inputMT" placeholder="0">
+                </div>
+            </div>
+            <div class="body__Container">
+                <div class="namaInput">Start date</div>
+                <div class="flexInp">
+                    <select name="bulan" id="list__bulan">
+                        <option value="0">Jan</option>
+                        <option value="1">Feb</option>
+                        <option value="2">Mar</option>
+                        <option value="3">Apr</option>
+                        <option value="4">Mei</option>
+                        <option value="5">Jun</option>
+                        <option value="6">Jul</option>
+                        <option value="7">Aug</option>
+                        <option value="8">Sep</option>
+                        <option value="9">Oct</option>
+                        <option value="10">Nov</option>
+                        <option value="11">Dec</option>
+                    </select>
+                    <select name="year" id="list__Year">
+                        <option value="0">2020</option>
+                        <option value="1">2021</option>
+                        <option value="2">2022</option>
+                        <option value="3">2023</option>
+                        <option value="4">2024</option>
+                        <option value="5">2025</option>
+                        <option value="6">2026</option>
+                        <option value="7">2027</option>
+                        <option value="8">2028</option>
+                        <option value="9">2029</option>
+                    </select>
+                </div>
+            </div>
+            <a id="AEP" href="#" onclick="extraPT()"></a>
+            <div id="inputExtraPayment">
+                <div class="body__Container">
+                    <div class="namaInput">To monthly</div>
+                    <div class="input">
+                        <label id="label-Monthly" for="inputMonthly" class="input-symbol-dollar">$</label>
+                        <input id="inputMonthly" type="text" name="inputMonthly" placeholder="0.0">
+                    </div>
+                </div>
+                <div class="body__Container">
+                    <div class="namaInput">To yearly</div>
+                    <div class="input">
+                        <label id="label-Yearly" for="inputYearly" class="input-symbol-dollar">$</label>
+                        <input id="inputYearly" type="text" name="inputYearly" placeholder="0.0">
+                        <select name="Yearly" id="list__bulan-Yearly">
+                            <option value="0">Jan</option>
+                            <option value="1">Feb</option>
+                            <option value="2">Mar</option>
+                            <option value="3">Apr</option>
+                            <option value="4">Mei</option>
+                            <option value="5">Jun</option>
+                            <option value="6">Jul</option>
+                            <option value="7">Aug</option>
+                            <option value="8">Sep</option>
+                            <option value="9">Oct</option>
+                            <option value="10">Nov</option>
+                            <option value="11">Dec</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--WidgetSubmit-->
+        <button type="submit" class="CalculatorWidget__Submit" onclick="openPops()">Calculate</button>
+        <!--WidgetFooter-->
+        <div class="CalculatorWidget__Footer">
+            By.JodieSoluna
+            &#xa9 copyright all reserved.
+        </div>
