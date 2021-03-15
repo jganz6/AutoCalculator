@@ -7,6 +7,6 @@
 ##installation
 ---
 add :
-- <div class="CalculatorWidget" id="calcuWidget"></div>
+- **<div class="CalculatorWidget" id="calcuWidget"></div>**
 - <script src="script/CalculatorWidget.js"></script>
 to bottom of body
