@@ -2,7 +2,7 @@
 ---
 ## MortgageAutoWidgetCalculator
 
-**website widget for calculate the Mortgage**
+__website widget for calculate the Mortgage__
 ---
 ## installation
 ---
