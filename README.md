@@ -1,10 +1,10 @@
 # AutoCalculator
 ---
-##MortgageAutoWidgetCalculator
+## MortgageAutoWidgetCalculator
 ---
 **website widget for calculate the Mortgage**
 ---
-##installation
+## installation
 ---
 add :
 ```html
